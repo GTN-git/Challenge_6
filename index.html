@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/CSS/style.css"/>
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <div class="nav">   
+    <h1 class="header">Weather Dashboard</h1>
+    </div>
+
+    <main>
+        <section class="search">
+            <h3>Search for a City:</h3><br>
+            <form>
+                <input type="text" id="citySearch" placeholder="San Francisco" /><br>
+                <button type="search">Search</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <section class="searchDisplay">
+        <div class="display">
+            <h3 id="cityDate"></h3><br>
+            <p id="temp"></p><br>
+            <p id="wind"></p><br>
+            <p id="humidity"></p><br>
+            <p id="uvIndex"></p>
+        </div>
+    </section>
+
+    <section class="forecast">
+        <h2>5-Day Forecast:</h2>
+        <div class="forecastDays">
+
+        </div>
+    </section>
+<script src="Assets/JS/script.js"></script>
+</body>
+</html>
