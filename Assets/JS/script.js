@@ -19,7 +19,7 @@ var cityNames = [];
 
   // upon page load, localstorage get item that array
   // make buttons for each thing inside array
-  // add evenet listeners for each thing inside array
+  // add event listeners for each thing inside array
 
 // get data from the weather API //upon event listener click loads data from fetch grabs lat and lon of city searched
 //https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={API key}
@@ -32,6 +32,9 @@ function search(event) {
   searchEl.appendChild(newButton);
 
   // add the city name to an array
+  cityNames.push(city);
+  localStorage.setItem("city", JSON.stringify(city));
+  console.log(cityNames);
   // localstorage set item that array
 
 
@@ -74,6 +77,19 @@ function search(event) {
     });
 }
 
+function loadData() {
+  var loadData = localStorage.getItem("city")
+  if (loadData == null || loadData == "") return;
+
+  city = JSON.parse(loadData)
+
+  for (i = 0; i < cityNames.length; i++) {
+    var historyButton = document.createElement("button");
+    historyButton.textContent = city;
+    searchEl.appendChild(historyButton);
+  }
+}
+
 //trail down the array
 
 // add the city to the search history log and store to local storage
@@ -90,5 +106,7 @@ var changeColor = function (uvIndex) {
     uvIndexEl.style.backgroundColor = "red";
   }
 };
+
+loadData();
 //upon event listener click loads data from fetch grabs lat and lon of city searched
 searchForm.addEventListener("submit", search);
