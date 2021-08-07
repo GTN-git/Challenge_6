@@ -1,3 +1,12 @@
+This is my GTN-Git weather application which was a project for my coding bootcamp. The parameters and user story of the assignment are below.
+
+<img src="../Assets/CSS/Images/Weather App copy.jpg">
+
+Deployed Link:
+Git Hub Repo:
+
+
+
 # 06 Server-Side APIs: Weather Dashboard
 
 Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.

@@ -38,19 +38,10 @@ var searchEl = document.getElementById("search");
 // API requirements and User Inputs
 var cityInputEl = document.getElementById("citySearch");
 var key = "e017ff1bdf19eb3fa5c2f9c7fc8fd4bc";
-
+//Array to Cycle
 var cityNames = [];
-console.log(moment())
-//on past load show past city searches to the left in the City section.
 
-//search for a city or click on a past city
-
-// upon page load, localstorage get item that array
-// make buttons for each thing inside array
-// add event listeners for each thing inside array
-
-// get data from the weather API //upon event listener click loads data from fetch grabs lat and lon of city searched
-//https://api.openweathermap.org/data/2.5/onecall?lat=33.44&lon=-94.04&exclude=hourly,daily&appid={API key}
+// Search using user Input and create a new button
 function search(event) {
   event.preventDefault();
   var city = cityInputEl.value;
@@ -67,14 +58,12 @@ function search(event) {
     //parse out the items in local storage to JSON
     cityNames = JSON.parse(localStorage.getItem("city"));
   }
+   // localstorage set item that array
   cityNames.push(city);
   localStorage.setItem("city", JSON.stringify(cityNames));
-
-  console.log(cityNames);
-  // localstorage set item that array
-
-  fetchCalls(city);
   // for loop through array and get the items we need
+  fetchCalls(city);
+  // clear the form
   cityInputEl.value="";
 }
 
@@ -190,6 +179,8 @@ function fetchCalls(city) {
         });
     });
 }
+
+// For the history button to allow search
 function loadData() {
   var loadData = localStorage.getItem("city");
   if (loadData == null || loadData == "") return;
