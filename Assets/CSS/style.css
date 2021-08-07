@@ -1,0 +1,70 @@
+
+.wrapper {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: .5fr 1.25fr 1.25fr;
+    grid-template-areas: 
+    "header header header header"
+    "search searchDisplay searchDisplay searchDisplay"
+    "search forecast forecast forecast";
+    grid-gap: .2rem;
+}
+
+.header {
+    grid-area: header;
+    background-image: linear-gradient(to right, skyblue , steelblue);
+    color: white;
+    text-align: center;
+}
+
+#searchDisplay {
+    grid-area: searchDisplay;
+}
+
+#search {
+    grid-area: search;
+    margin: 0px 10px 0px 10px;
+}
+
+#forecast {
+    grid-area: forecast;
+}
+
+.forecastDays {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.card {
+margin: 10px 10px;
+}
+
+#uvIndex {
+    width: fit-content;
+    border-radius: 25px;
+}
+
+#btn {
+    width: 180px;
+    border-radius: 5px;
+}
+
+#citySearch {
+    width: 180px;
+    border-radius: 5px;
+}
+
+.historyBtn {
+    background-color: royalblue;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 4px 0px 4px 0px;
+    width: 180px;
+    border-radius: 5px;
+}
