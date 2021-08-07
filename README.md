@@ -1,9 +1,9 @@
 This is my GTN-Git weather application which was a project for my coding bootcamp. The parameters and user story of the assignment are below.
 
-<img src="../Assets/CSS/Images/Weather App copy.jpg">
+![Weather App copy](https://user-images.githubusercontent.com/85602645/128610594-0855bcf2-b726-4fc8-9136-d33217479386.jpg)
 
-Deployed Link:
-Git Hub Repo:
+Deployed Link: https://gtn-git.github.io/Challenge_6/
+Git Hub Repo: https://github.com/GTN-git/Challenge_6
 
 
 
